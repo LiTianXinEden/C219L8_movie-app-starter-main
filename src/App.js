@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-const KEY = "";
+const KEY = "4d53323c";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -41,6 +41,10 @@ function App() {
       controller.abort();
     };
   }, [query]);
+
+  function handleChange(e) {
+    setQuery(e.target.value);
+  };
 
 
 
